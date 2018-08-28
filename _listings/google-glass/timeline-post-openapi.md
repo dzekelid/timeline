@@ -1,9 +1,10 @@
+---
 swagger: "2.0"
 x-collection-name: Google Glass
-x-complete: 1
+x-complete: 0
 info:
-  title: Google Mirror
-  description: interacts-with-glass-users-via-the-timeline-
+  title: Google Glass APIs Update Timeline
+  description: Inserts a new item into the timeline.
   contact:
     name: Google
     url: https://google.com
@@ -66,50 +67,17 @@ paths:
           description: OK
       tags:
       - Timeline
-  /timeline/{id}:
-    delete:
-      summary: Delete Timeline
-      description: Deletes a timeline item.
-      operationId: mirror.timeline.delete
-      x-api-path-slug: timelineid-delete
-      parameters:
-      - in: path
-        name: id
-        description: The ID of the timeline item
-      responses:
-        200:
-          description: OK
-      tags:
-      - Timeline
-    get:
-      summary: Get Timeline
-      description: Gets a single timeline item by ID.
-      operationId: mirror.timeline.get
-      x-api-path-slug: timelineid-get
-      parameters:
-      - in: path
-        name: id
-        description: The ID of the timeline item
-      responses:
-        200:
-          description: OK
-      tags:
-      - Timeline
-    patch:
-      summary: Update Timeline
-      description: Updates a timeline item in place. This method supports patch semantics.
-      operationId: mirror.timeline.patch
-      x-api-path-slug: timelineid-patch
-      parameters:
-      - in: body
-        name: body
-        schema:
-          $ref: '#/definitions/holder'
-      - in: path
-        name: id
-        description: The ID of the timeline item
-      responses:
-        200:
-          description: OK
-      tags:
-      - Timeline
+x-streamrank:
+  polling_total_time_average: 0
+  polling_size_download_average: 0
+  streaming_total_time_average: 0
+  streaming_size_download_average: 0
+  change_yes: 0
+  change_no: 0
+  time_percentage: 0
+  size_percentage: 0
+  change_percentage: 0
+  last_run: ""
+  days_run: 0
+  minute_run: 0
+---
